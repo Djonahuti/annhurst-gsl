@@ -49,8 +49,10 @@ if (!$currentPage && $page !== 'home') {
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" xintegrity="sha512-z3gLpd7yXhUqG20I6z+e57vM2A/tA8W/FhQz4aM2FpQv+P4H2rG8M9BfT4g/eF8n5mBf4P8GfRzF2fF5" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
 
     <!-- Tabler Icons for Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
@@ -73,6 +75,12 @@ if (!$currentPage && $page !== 'home') {
     
     <!-- Custom CSS -->
     <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .playfair-display {
+            font-family: 'Playfair Display', serif;
+        }        
         .hero-gradient {
             background: linear-gradient(135deg, #b5121b 0%, #8f0e15 100%);
         }
@@ -391,7 +399,7 @@ if (!$currentPage && $page !== 'home') {
         }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 playfair-display">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1026,6 +1034,9 @@ if (!$currentPage && $page !== 'home') {
                 </div>
             </section>
 
+            <!-- Contact Section -->
+            <?php include('use/contact.php'); ?>            
+
             <!-- Featured Buses Section -->
             <section class="py-16 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1093,83 +1104,7 @@ if (!$currentPage && $page !== 'home') {
 
         <?php elseif ($page === 'contact'): ?>
             <!-- Contact Page -->
-            <section class="py-16 bg-gray-50">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 class="text-4xl font-bold text-center text-gray-900 mb-12">Contact Us</h1>
-                    
-                    <div class="grid md:grid-cols-2 gap-8 mb-12">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4">Get in Touch</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                    </svg>
-                                    <span><?php echo getSetting('contact_email', 'info@annhurst.com'); ?></span>
-                                </div>
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                                    </svg>
-                                    <span><?php echo getSetting('contact_phone', '+234 123 456 7890'); ?></span>
-                                </div>
-                                <div class="flex items-center">
-                                    <svg class="w-5 h-5 text-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                    </svg>
-                                    <span><?php echo getSetting('contact_address', '123 Transport Street, Lagos, Nigeria'); ?></span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4">Business Hours</h3>
-                            <div class="space-y-2">
-                                <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
-                                <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
-                                <p><strong>Sunday:</strong> Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact Form -->
-                    <div class="bg-white rounded-lg shadow-lg p-8">
-                        <h3 class="text-xl font-semibold mb-6">Send us a Message</h3>
-                        <form action="process_contact.php" method="POST" class="space-y-6">
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                                    <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                    <input type="email" id="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                            </div>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                                <div>
-                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
-                                    <input type="text" id="subject" name="subject" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                                </div>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                                    Send Message
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
+            <?php include('use/contact.php'); ?>
 
         <?php else: ?>
             <!-- Generic Page Content -->
@@ -1273,7 +1208,7 @@ if (!$currentPage && $page !== 'home') {
                     <p><?php echo getSetting('footer_text', '© 2025 Annhurst Transport Service Limited. All rights reserved.'); ?></p>
                     <div class="flex items-center space-x-2">
                         <span>Powered by</span>
-                        <a href="#" class="text-red-500 hover:underline">SodeyD Limited</a>
+                        <a href="#" class="text-red-500 hover:underline">UT Express</a>
                     </div>
                     <!-- Back to top button -->
                     <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="p-3 rounded-full bg-red-600 hover:bg-red-700 transition-colors duration-200 text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-red-500">
