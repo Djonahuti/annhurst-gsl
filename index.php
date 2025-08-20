@@ -46,6 +46,12 @@ if (!$currentPage && $page !== 'home') {
     <title><?php echo $currentPage ? htmlspecialchars($currentPage['title']) : 'Annhurst Transport Service Limited'; ?></title>
     <meta name="description" content="<?php echo $currentPage ? htmlspecialchars($currentPage['meta_description'] ?? '') : 'Your trusted partner for bus higher purchase solutions'; ?>">
     <meta name="keywords" content="<?php echo $currentPage ? htmlspecialchars($currentPage['meta_keywords'] ?? '') : 'bus, transport, higher purchase, annhurst'; ?>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet">   
+
     <!-- Tabler Icons for Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
   
@@ -1204,10 +1210,10 @@ if (!$currentPage && $page !== 'home') {
                         Leading provider of investment opportunities and management services in Nigeria. We specialize in transportation, property investment, and tailored business solutions that deliver exceptional returns.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <a href="https://www.facebook.com/Annhurst-Global-Services-Ltd-100954948649293/" class="text-gray-400 hover:text-white transition-colors duration-200">
                             <svg class="text-lg"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" /></svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                        <a href="https://www.instagram.com/annhurst_gsl" class="text-gray-400 hover:text-white transition-colors duration-200">
                             <svg class="text-lg"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
                         </a>
                     </div>
@@ -1229,15 +1235,15 @@ if (!$currentPage && $page !== 'home') {
                 <div class="md:col-span-1 space-y-4">
                     <h3 class="text-white font-semibold text-lg mb-4">Contact Information</h3>
                     <div class="flex items-center space-x-3">
-                        <i class="fa fa-phone text-gray-400"></i>
+                        <svg class="text-red-600" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-sz7xmlte=""> <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" data-astro-cid-sz7xmlte=""></path> </svg>
                         <p class="text-sm text-gray-400"><?php echo getSetting('contact_phone', '+234 809 318 3556'); ?></p>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <i class="fa fa-envelope text-gray-400"></i>
+                        <svg class="text-red-600" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-sz7xmlte=""> <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" data-astro-cid-sz7xmlte=""></path> <polyline points="22,6 12,13 2,6" data-astro-cid-sz7xmlte=""></polyline> </svg>
                         <p class="text-sm text-gray-400"><?php echo getSetting('contact_email', 'customerservices@annhurst-gsl.com'); ?></p>
                     </div>
                     <div class="flex items-start space-x-3">
-                        <i class="fa fa-map-marker-alt text-gray-400"></i>
+                        <svg class="text-red-600" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-astro-cid-sz7xmlte=""> <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" data-astro-cid-sz7xmlte=""></path> <circle cx="12" cy="10" r="3" data-astro-cid-sz7xmlte=""></circle> </svg>
                         <p class="text-sm text-gray-400"><?php echo getSetting('contact_address', 'Lagos, Nigeria'); ?></p>
                     </div>
                 </div>
