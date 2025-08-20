@@ -75,8 +75,8 @@ $stats = getStats();
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
                         <div class="flex items-center">
-                            <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mr-3">
-                                <span class="text-white font-bold text-lg">A</span>
+                            <div class="rounded-lg flex items-center justify-center mr-3">
+                                <img src="../img/ann.png" alt="Annhurst Transport" class="h-10 w-auto">
                             </div>
                             <span class="text-xl font-bold text-gray-900">Admin Panel</span>
                         </div>
