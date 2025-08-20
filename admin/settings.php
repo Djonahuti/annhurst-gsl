@@ -235,8 +235,8 @@ $settings = getSettings();
                     <div>
                         <label class="block text-sm font-medium text-gray-700">Company Logo</label>
                         <div class="mt-1">
-                            <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                                <span class="text-white font-bold text-lg">A</span>
+                            <div class="w-12 h-12 rounded-lg flex items-center justify-center">
+                                <img src="../img/ann.png" alt="Annhurst Transport" class="h-10 w-auto">
                             </div>
                         </div>
                         <p class="mt-1 text-sm text-gray-500">Replace the logo file in your assets folder</p>
