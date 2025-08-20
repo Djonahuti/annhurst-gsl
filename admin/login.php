@@ -65,8 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="max-w-md w-full space-y-8">
         <div class="text-center">
             <div class="flex justify-center">
-                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-3xl">A</span>
+                <div class="w-16 h-16 rounded-lg flex items-center justify-center">
+                    <img src="../img/ann.png" alt="Annhurst Transport" class="h-10 w-auto">
                 </div>
             </div>
             <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
