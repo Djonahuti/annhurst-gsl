@@ -438,10 +438,10 @@ if (!$currentPage && $page !== 'home') {
         <!-- Mobile menu -->
         <div class="mobile-menu hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="index.php" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="index.php?page=about" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
-                <a href="index.php?page=buses" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Our Buses</a>
-                <a href="index.php?page=contact" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <a href="index.php" class="block px-3 py-2 rounded-md text-base font-medium <?= $current === 'home' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Home</a>
+                <a href="index.php?page=about" class="block px-3 py-2 rounded-md text-base font-medium <?= $current === 'about' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">About</a>
+                <a href="index.php?page=buses" class="block px-3 py-2 rounded-md text-base font-medium <?= $current === 'buses' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Our Buses</a>
+                <a href="index.php?page=contact" class="block px-3 py-2 rounded-md text-base font-medium <?= $current === 'contact' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Contact</a>
                 <a href="index.php?page=contact" class="bg-primary hover:bg-primary-dark text-white block px-3 py-2 rounded-md text-base font-medium">Get Started</a>
             </div>
         </div>
