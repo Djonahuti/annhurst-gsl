@@ -400,6 +400,10 @@ if (!$currentPage && $page !== 'home') {
     </style>
 </head>
 <body class="bg-gray-100 playfair-display">
+
+<?php
+  $current = $_GET['page'] ?? 'home';
+?>
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -413,10 +417,10 @@ if (!$currentPage && $page !== 'home') {
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.php" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-                    <a href="index.php?page=about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-                    <a href="index.php?page=buses" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Buses</a>
-                    <a href="index.php?page=contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                    <a href="index.php" class="px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $current === 'home' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Home</a>
+                    <a href="index.php?page=about" class="px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $current === 'about' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">About</a>
+                    <a href="index.php?page=buses" class="px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $current === 'buses' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Our Buses</a>
+                    <a href="index.php?page=contact" class="px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $current === 'contact' ? 'text-primary' : 'text-gray-800 hover:text-primary' ?>">Contact</a>
                     <a href="index.php?page=contact" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Get Started</a>
                 </div>
                 
