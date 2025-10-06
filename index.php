@@ -417,7 +417,7 @@ if (!$currentPage && $page !== 'home') {
                     <a href="index.php?page=about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
                     <a href="index.php?page=buses" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Buses</a>
                     <a href="index.php?page=contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
-                    <a href="admin/login.php" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Admin</a>
+                    <a href="index.php?page=contact" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Get Started</a>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -438,7 +438,7 @@ if (!$currentPage && $page !== 'home') {
                 <a href="index.php?page=about" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
                 <a href="index.php?page=buses" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Our Buses</a>
                 <a href="index.php?page=contact" class="text-gray-700 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Contact</a>
-                <a href="admin/login.php" class="bg-primary hover:bg-primary-dark text-white block px-3 py-2 rounded-md text-base font-medium">Admin</a>
+                <a href="index.php?page=contact" class="bg-primary hover:bg-primary-dark text-white block px-3 py-2 rounded-md text-base font-medium">Get Started</a>
             </div>
         </div>
     </nav>
@@ -1101,6 +1101,10 @@ if (!$currentPage && $page !== 'home') {
                     </div>
                 </div>
             </section>
+
+<?php elseif ($page === 'about'): ?>
+            <!-- About Page -->
+            <?php include('use/about.php'); ?>
 
         <?php elseif ($page === 'contact'): ?>
             <!-- Contact Page -->
