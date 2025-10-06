@@ -38,11 +38,6 @@ if (!$currentPage && $page !== 'home') {
     exit;
 }
 ?>
-
-<?php
-$currentPage = basename($_SERVER['PHP_SELF']);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -418,10 +413,10 @@ $currentPage = basename($_SERVER['PHP_SELF']);
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.php" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $currentPage === 'index.php' ? 'text-primary' : '' ?>">Home</a>
-                    <a href="index.php?page=about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $currentPage === 'index.php?page=about' ? 'text-primary' : '' ?>">About</a>
-                    <a href="index.php?page=buses" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $currentPage === 'index.php?page=buses' ? 'text-primary' : '' ?>">Our Buses</a>
-                    <a href="index.php?page=contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors <?= $currentPage === 'index.php?page=contact' ? 'text-primary' : '' ?>">Contact</a>
+                    <a href="index.php" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="index.php?page=about" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    <a href="index.php?page=buses" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Our Buses</a>
+                    <a href="index.php?page=contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
                     <a href="index.php?page=contact" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">Get Started</a>
                 </div>
                 
